@@ -1,0 +1,10 @@
+<h1 class="font-weight-bold text-center">Photos album</h1>
+<div class="photos row">
+ <div class="col-10 offset-1">
+      <div class="row">
+      <div class="col-lg-3 col-6 photo" *ngFor='let photo of photos; let i = index'>
+        <img class='' src="{{photo.webformatURL}}" alt="">
+    </div>
+    
+  </div>
+</div></div>

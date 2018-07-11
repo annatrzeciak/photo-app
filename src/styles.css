@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url(/assets/fonts/Exo2-Thin.eot);
+    src: url(/assets/fonts/Exo2-Thin.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/Exo2-Thin.woff2) format("woff2"), url(/assets/fonts/Exo2-Thin.woff) format("woff"), url(/assets/fonts/Exo2-Thin.ttf) format("truetype"), url(/assets/fonts/Exo2-Thin.svg#Exo2-Thin) format("svg");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url(/assets/fonts/Exo2-Bold.eot);
+    src: url(/assets/fonts/Exo2-Bold.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/Exo2-Bold.woff2) format("woff2"), url(/assets/fonts/Exo2-Bold.woff) format("woff"), url(/assets/fonts/Exo2-Bold.ttf) format("truetype"), url(/assets/fonts/Exo2-Bold.svg#Exo2-Bold) format("svg");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url(/assets/fonts/Exo2-Regular.eot);
+    src: url(/assets/fonts/Exo2-Regular.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/Exo2-Regular.woff2) format("woff2"), url(/assets/fonts/Exo2-Regular.woff) format("woff"), url(/assets/fonts/Exo2-Regular.ttf) format("truetype"), url(/assets/fonts/Exo2-Regular.svg#Exo2-Regular) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url(/assets/fonts/Exo2-Light.eot);
+    src: url(/assets/fonts/Exo2-Light.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/Exo2-Light.woff2) format("woff2"), url(/assets/fonts/Exo2-Light.woff) format("woff"), url(/assets/fonts/Exo2-Light.ttf) format("truetype"), url(/assets/fonts/Exo2-Light.svg#Exo2-Light) format("svg");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Exo 2';
+    src: url(/assets/fonts/Exo2-Black.eot);
+    src: url(/assets/fonts/Exo2-Black.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/Exo2-Black.woff2) format("woff2"), url(/assets/fonts/Exo2-Black.woff) format("woff"), url(/assets/fonts/Exo2-Black.ttf) format("truetype"), url(/assets/fonts/Exo2-Black.svg#Exo2-Black) format("svg");
+    font-weight: 900;
+    font-style: normal
+}
+
+
+body{
+    font-family: 'Exo 2';
+    overflow-x: hidden;
+}
