@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 
 import { AppComponent } from './app.component';
@@ -19,7 +20,8 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    PaginationModule.forRoot()
   ],
   providers: [PhotosService],
   bootstrap: [AppComponent]

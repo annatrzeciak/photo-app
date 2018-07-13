@@ -11,17 +11,21 @@ import { Response } from "@angular/http";
 export class PhotoAlbumComponent implements OnInit {
 
   photos=[];
+  page:number;
+  totalItems=1;
+
 
   constructor(private photoService: PhotosService) {
-    this.loadPhotos();
+    this.loadPhotos(this.page);
    }
 
   ngOnInit() {
   }
 
-  loadPhotos(){
-   this.photoService.getPhotos()
+  loadPhotos(number){
+   this.photoService.getPhotos(number)
       .then(result => {
+        this.totalItems=result.totalHits;
         this.photos = result.hits;
         console.log(this.photos);
       })
@@ -31,4 +35,10 @@ export class PhotoAlbumComponent implements OnInit {
   showMessage(message){
     console.log(message);
   }
+  changePage(e){
+    console.log(e)
+    this.loadPhotos(e.page);
+  }
+
+  
 }

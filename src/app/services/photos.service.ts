@@ -6,9 +6,9 @@ export class PhotosService {
   key :string ='6530904-2d22de7109299706e1d2ddc39';
   constructor(private http: Http) { }
 
-  getPhotos(){
+  getPhotos(page:number){
     return this.http
-      .get('https://pixabay.com/api/?key='+this.key+'&q=&page=&image_type=photo','')
+      .get('https://pixabay.com/api/?key='+this.key+'&q=&page='+page+'&image_type=photo','')
       .toPromise()
       .then(this.extractData)
       .catch(this.handleError);

@@ -5,6 +5,11 @@
       <div class="col-lg-3 col-6 photo" *ngFor='let photo of photos; let i = index'>
         <img class='' src="{{photo.webformatURL}}" alt="">
     </div>
-    
+    </div>
+    <div class="row text-center">
+    <pagination previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"  [itemsPerPage]='20'  [maxSize]='7' [totalItems]="totalItems"  (pageChanged)="loadPhotos($event.page)"></pagination>
+  
   </div>
-</div></div>
+</div>
+
+</div>
