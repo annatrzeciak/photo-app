@@ -1,15 +1,29 @@
 <h1 class="font-weight-bold text-center">Photos album</h1>
+<h3 *ngIf="errorMessage" class="error-message">{{errorMessage}}</h3>
+<app-spinner *ngIf="loading"></app-spinner>
 <div class="photos row">
  <div class="col-10 offset-1">
       <div class="row">
       <div class="col-lg-3 col-6 photo" *ngFor='let photo of photos; let i = index'>
-        <img class='' src="{{photo.webformatURL}}" alt="">
+        <img (click)='showPhoto(i)' class='' src="{{photo.webformatURL}}" alt="{{photo.tags}}" title="Photo: {{photo.tags}}, author: {{photo.user}}">
     </div>
     </div>
     <div class="row text-center">
-    <pagination previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"  [itemsPerPage]='20'  [maxSize]='7' [totalItems]="totalItems"  (pageChanged)="loadPhotos($event.page)"></pagination>
-  
+    <pagination *ngIf='photos.length>0' previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"  [itemsPerPage]='20'  [maxSize]='7' [totalItems]="totalItems"  (pageChanged)="loadPhotos($event.page)"></pagination>
+  </div>
+</div>
+</div>
+
+<div id="photo-window">
+    <a (click)='closePhotoWindow()' class="close"><i class="fas fa-times"></i></a>
+  <div class="photo-window-content d-flex justify-content-center align-items-center">
+    <a (click)='showPrevPhoto()' id="prev-button">
+      <i class="fas fa-chevron-left"></i></a>
+      <img class='' src="" alt="">
+    <img class=''src="" alt="">
+    <img class=''src="" alt="">
+    <a (click)='showNextPhoto()' id="next-button">
+    <i class="fas fa-chevron-right"></i></a>
   </div>
 </div>
 
-</div>

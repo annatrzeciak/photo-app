@@ -6,9 +6,9 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { AppComponent } from './app.component';
 import { PhotoAlbumComponent } from './photo-album/photo-album.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { RandomComponent } from './random/random.component';
 import { PhotosService } from './services/photos.service';
 import { HttpModule } from '@angular/http';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     PhotoAlbumComponent,
     NavbarComponent,
-    RandomComponent
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

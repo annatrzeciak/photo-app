@@ -1,3 +1,8 @@
+.error-message{
+    color:red;
+    text-align: center;
+}
+
 .photos {
     margin: 50px -45px;
 }
@@ -8,6 +13,7 @@
     height: 250px;
     transform: translateX(-25%);
     margin-bottom: -30px;
+    cursor: pointer;
 }
 
 .photo img {
@@ -15,6 +21,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+  
 }
 
 .photo:nth-of-type(8n+5),
@@ -41,6 +48,9 @@ margin-top: 100px;
 color:#fff;
 
 }
+
+
+
 @media screen and (max-width:1200px) {
     .photo {
         height: 200px;
