@@ -30,7 +30,7 @@ export class PhotoAlbumComponent {
         this.totalItems = result.totalHits;
         this.photos = result.hits;
         this.loading = false;
-        console.log(this.photos);
+        
       })
       .catch(error => (this.errorMessage = error));
   }
